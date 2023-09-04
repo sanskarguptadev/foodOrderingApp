@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import logo from './assets/ODUJEJ0.jpg';
+import { resList } from './data';
 
 const Header = () => {
     return (
@@ -20,10 +21,20 @@ const Header = () => {
     )
 }
 
-const RestuarntCard = () => {
+const RestuarntCard = (props) => {
+    const { resData } = props;
+    const {cloudinaryImageId, name, cuisines, deliveryTime, avgRating} = resData?.data
     return (
         <div className="res-card">
-            <h3>Meghana Foods</h3>
+            <img
+                className="res-logo"
+                alt="res-logo"
+                src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/"+cloudinaryImageId}
+            />
+            <h3>{name}</h3>
+            <h4>{cuisines.join(', ')}</h4>
+            <h4>{avgRating} Stars</h4>
+            <h4>{deliveryTime} mins</h4>
         </div>
     )
 }
@@ -33,8 +44,13 @@ const Body = () => {
         <div className="body">
             <div className="search">Search</div>
             <div className="res-container">
-                <RestuarntCard />
-                <RestuarntCard />
+                {
+                    resList.map(res => {
+                        return (
+                            <RestuarntCard key={res.data.id} resData={res} />
+                        )
+                    })
+                }
             </div>
         </div>
     )
