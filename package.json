@@ -1,0 +1,31 @@
+{
+  "name": "foodorderapp",
+  "version": "1.0.0",
+  "description": "Food Ordering App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanskarguptadev/foodOrderingApp.git"
+  },
+  "keywords": [
+    "Food"
+  ],
+  "author": "Sanskar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanskarguptadev/foodOrderingApp/issues"
+  },
+  "homepage": "https://github.com/sanskarguptadev/foodOrderingApp#readme",
+  "dependencies": {
+    "jest": "^29.6.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  }
+}

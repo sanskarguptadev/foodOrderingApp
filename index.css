@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-items {
+    margin-right: 10px;
+}
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    padding-inline-start: 20px;
+}
+
+.nav-items > ul > li {
+    margin: 10px;
+    font-size: 18px;
+}
+
+.res-card {
+    width: 200px;
+    height: 400px;
+    border: 1px solid gray;
+}
+
+.search {
+    padding-bottom: 10px;
+}
